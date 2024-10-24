@@ -1,0 +1,298 @@
+:root {
+    --bg-principal: #000000; /* Fundo principal */
+    --destaque-bg: #639379; /* Cor de destaque para alguns componentes */
+    --secundario-bg: #426968; /* Fundo secundário */
+    --add-bg: #2d504c; /* Fundo adicional */
+    --text-claro: #d3dcde; /* Texto claro */
+    --text-secundario: #6f8395; /* Texto secundário */
+    --text-escuro: #0d1724; /* Texto escuro */
+    --border-escuro: #192939; /* Bordas e detalhes */
+    --detalhe-escuro: #0a1528; /* Outros componentes */
+  }
+
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.escuro {
+    --bg-principal: #000000; /* Fundo principal */
+    --destaque-bg: #639379; /* Cor de destaque para alguns componentes */
+    --secundario-bg: #426968; /* Fundo secundário */
+    --add-bg: #2d504c; /* Fundo adicional */
+    --text-claro: #d3dcde; /* Texto claro */
+    --text-secundario: #6f8395; /* Texto secundário */
+    --text-escuro: #0d1724; /* Texto escuro */
+    --border-escuro: #192939; /* Bordas e detalhes */
+    --detalhe-escuro: #0a1528; /* Outros componentes */
+  }
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #6c807f; /* Cor de fundo da página */
+    background-size: 65px;
+    margin: 0 auto;
+    max-width: 900px; 
+}
+
+body.escuro {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--secundario-bg); /* Fundo da página */
+    color: var(--text-claro); /* Texto base */
+    background-size: 65px;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+main {
+    background-color: #ece9e9;
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+header .container
+{
+    background-color: #639379;
+  /*box-shadow: 1px 1px 4px #4d725e;*/
+    height: 100px;
+    
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0% 4%; 
+    border: 2px solid #5e8b73;
+}
+.container img 
+{
+    max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+.navbar 
+{
+    background-color: #ece9e9; /* Cor de fundo da navbar */
+    padding: 15px 0;
+    text-align: center;
+    border: 2px solid #d9d9d9; /* Linha inferior da navbar */
+}
+
+.navbar ul 
+{
+    list-style: none; /* Remove bullets */
+    display: flex;
+    justify-content: center; /* Centraliza os itens */
+    gap: 50px; /* Espaço entre os itens */
+}
+
+.navbar ul li 
+{
+    position: relative;
+}
+
+.navbar ul li a 
+{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333; /* Cor do texto */
+    text-transform: uppercase; /* Letras maiúsculas */
+    padding: 5px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover 
+{
+    color: #000000; /* Cor ao passar o mouse */
+}
+
+.navbar ul li::after 
+{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px; /* Posição da linha abaixo do texto */
+    height: 2px;
+    background-color: #000000; /* Cor da linha */
+    transform: scaleX(0.2); /* Inicia a linha encolhida */
+    transition: transform 0.3s ease; /* Animação suave */
+}
+
+.navbar ul li:hover::after 
+{
+    transform: scaleX(1); /* Expande a linha quando o mouse passa */
+}
+
+.Banner {
+    /* background-color: #426968;  Cor de fundo da navbar */
+    padding: 0px 0;
+    text-align: center;     
+    width: 100%;
+    height: 100%;
+}
+
+
+.Banner img 
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+}
+
+.Banner h2{
+    font-size: 24px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+}
+
+.Banner h2::after{
+    content: '';
+    display: block;
+    width: 20%; /* Ajuste a largura conforme desejado */
+    height: 2px;
+    background-color: black;
+    margin: 4px auto 0; /* Centraliza a linha */
+}
+.pets {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.pet-link {
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+}
+
+.pet-icone {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+
+
+.pet-adocao h2::after{
+    content: '';
+    display: block;
+    width: 20%; /* Ajuste a largura conforme desejado */
+    height: 2px;
+    background-color: black;
+    margin: 4px auto 0; /* Centraliza a linha */
+}
+
+.pet-adocao h2 {
+    font-size: 24px;
+    margin-top: 70px;
+    margin-bottom: 15px;
+    
+}
+
+.pet-adocao p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.pet-adocao {
+    text-align: center;
+}
+
+.pet-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.pet-item {
+    text-align: center;
+}
+
+.pet-imagem {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+}
+
+.pet-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.pet-item p {
+    margin-bottom: 15px;
+}
+
+footer {
+    padding: 5px;
+     border-width: 1px;
+     border-style: ridge;
+     border-color: rgba(110, 110, 110, 0.514);
+     background-color:#639379;       
+     text-align: center;
+  }
+
+  /*    RESPONSIVIDADE! */
+/* Responsividade para telas maiores, desktops */
+@media (min-width: 1024px) {
+    body {
+        font-size: 18px;
+    }
+    .img, .Banner img {
+        width: 100%;
+        max-width: 800px; /* Aumentei o max-width para as imagens no banner */
+        height: auto;
+    }
+}
+
+/* Para celulares */
+@media (max-width: 767px) {
+    .pets, .pet-container {
+        display: flex;
+        flex-direction: column; /* Coloca as imagens uma embaixo da outra */
+        align-items: center; /* Centraliza as imagens */
+    }
+
+    .pet-item {
+        width: 100%; /* Ajusta o tamanho dos itens */
+        text-align: center;
+    }
+}
+
+/* Para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .pets, .pet-container {
+        display: flex;
+        flex-direction: column; /* Mantenha as imagens uma embaixo da outra */
+        align-items: center; /* Centraliza as imagens */
+    }
+}
